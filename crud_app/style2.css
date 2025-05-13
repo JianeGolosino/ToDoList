@@ -1,0 +1,271 @@
+/* Reset and background setup */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/bekground.gif') no-repeat center center fixed;
+    background-size: cover; /* Changed from 100% 100% to cover for full stretch */
+}
+
+/* Glass-like container */
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 25px;
+    background: rgba(255, 255, 224, 0.2);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Title styling with orange glow and float animation */
+h2 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 3.5em;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow:
+        0 0 6px #ff5800,
+        0 0 12px #ff5800,
+        0 0 20px #ff5800;
+    animation: floatTitle 3s ease-in-out infinite;
+}
+
+/* Float animation */
+@keyframes floatTitle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Table container */
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 224, 0.2); /* Match container glass color */
+    backdrop-filter: blur(40px); /* Apply blur */
+    -webkit-backdrop-filter: blur(40px); /* Safari support */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Glass effect */
+    border: none; /* Removed default border */
+}
+
+/* Table border and text */
+table {
+    border-radius: 15px; /* Make the entire table's corners round */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Optional for table shadow */
+}
+
+/* Rounded cells and spacing */
+th, td {
+    padding: 10px 14px;
+    text-align: center;
+}
+th {
+    background-color: rgba(255, 255, 224, 0.3); /* Lighter glass effect with a darker overlay */
+    color: white; /* White text for contrast */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    padding: 12px 14px; /* Spacing for the titles */
+    border-radius: 10px; /* Rounded corners for the headers */
+    backdrop-filter: blur(40px); /* Glass effect */
+    -webkit-backdrop-filter: blur(40px); /* Safari support */
+}
+
+/* Row hover effect */
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Buttons */
+.btn, .btn-delete {
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: 2px solid transparent;
+}
+
+/* Save Button */
+.btn {
+    background-color: #e89149;
+    color: white;
+    border: 2px solid #5c4033;
+}
+
+.btn:hover {
+    background-color: #d87e33;
+}
+
+/* Delete Button */
+.btn-delete {
+    background-color: red;
+    color: white;
+    border: 2px solid #5c4033;
+}
+
+.btn-delete:hover {
+    background-color: #cc0000;
+}
+
+/* Button on click (shared style) */
+.btn.clicked,
+.btn-delete.clicked,
+#add-task-btn.clicked {
+    background-color: transparent !important;
+    color: grey !important;
+}
+
+/* Add task button floating & animation */
+#add-task-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    padding: 10px 18px;
+    background-color: #e89149;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #e89149;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 0 12px rgba(255, 255, 102, 0.6); /* Yellow glow */
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: floatButton 3s ease-in-out infinite;
+}
+
+#add-task-btn:hover {
+    background-color: #d87e33;
+}
+
+/* Float animation for button */
+@keyframes floatButton {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Form layout */
+form {
+    width: 85%;
+    margin: 25px auto;
+}
+
+/* Input fields */
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+/* Submit button */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #e89149;
+    color: white;
+    border: 2px solid #5c4033;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* On click behavior for submit button */
+input[type="submit"].clicked {
+    background-color: transparent;
+    color: grey;
+}
+
+.add-form {
+    background: rgba(255, 255, 224, 0.2); /* Match glass table style */
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* Similar to container */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Label Styling */
+.add-form label {
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 2px black;
+}
+
+/* Input Styling */
+.add-form input[type="text"],
+.add-form input[type="date"] {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+/* Add Task Button Styling */
+.add-btn {
+    background-color: #e89149;
+    color: white;
+    border: 2px solid #e89149;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover and click effect (same as .btn and #add-task-btn) */
+.add-btn:hover {
+    background-color: #d87e33;
+}
+
+.add-btn.clicked {
+    background-color: transparent !important;
+    color: grey !important;
+    border: 2px solid #e89149;
+}
+
+/* Position and animation for the cat gif */
+#cat {
+    position: absolute;
+    bottom: 0;  /* Align the cat to the bottom of the screen */
+    left: 0;  /* Start at the left side */
+    width: 130px;  /* Set the size of the gif (adjust as needed) */
+    animation: walkAcross 150s linear infinite;  /* Slow walking animation */
+}
+
+/* Keyframes for walking the cat gif */
+@keyframes walkAcross {
+    0% {
+        left: 0;  /* Start at the left side */
+    }
+    50% {
+        left: calc(100% - 50px);  /* Move to the right side (subtract gif width) */
+    }
+    100% {
+        left: 0;  /* Return to the left side */
+    }
+}
