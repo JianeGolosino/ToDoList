@@ -1,0 +1,115 @@
+/* Reset some default spacing */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Apply blurred glass effect to container */
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+    backdrop-filter: blur(10px); /* blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Title styling */
+h2 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+/* Styled table */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Table borders and spacing */
+table, th, td {
+    border: 2px dashed white;
+    color: blue;
+}
+
+/* Table content spacing */
+th, td {
+    padding: 12px 16px;
+    text-align: center;
+}
+
+/* Header styling */
+th {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Buttons */
+.btn, .btn-delete {
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3s ease;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn-delete {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #da190b;
+}
+
+/* Form box */
+form {
+    width: 80%;
+    margin: 30px auto;
+}
+
+/* Input fields */
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+/* Submit button */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
